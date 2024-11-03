@@ -1,4 +1,4 @@
-import MyTabBar from "@/component/tabbar";
+import MyTabBar from "@/components/tabbar";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { Tabs } from "expo-router";
 
