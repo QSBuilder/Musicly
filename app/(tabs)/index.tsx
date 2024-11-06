@@ -2,15 +2,10 @@ import { Text, View } from "react-native";
 
 export default function Index() {
   return (
-    <View
-      className="w-10 h-10 bg-blue-500"
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text className="mt-50">This is my first Expo App.</Text>
+    <View className="flex flex-1 min-h-full, center dark:bg-black content-center	">
+      <Text className="text-center font-bold text-3xl tracking-tight text-white justify-center	">
+        This is my first Expo App.
+      </Text>
     </View>
   );
 }
