@@ -9,7 +9,7 @@ import { getFirestore } from "firebase/firestore";
 // import {...} from "firebase/functions";
 // import {...} from "firebase/storage";
 
-// Initialize Firebase
+// Initialize Firebase//
 const firebaseConfig = {
   apiKey: "AIzaSyCFrJe4lcRo5RB1TeddQCJGAKMciFqzHnY",
   authDomain: "musiicly-f3805.firebaseapp.com",
