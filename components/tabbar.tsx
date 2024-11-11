@@ -47,6 +47,7 @@ export default function MyTabBar({
   return (
     <View onLayout={onTabbarLayout} style={styles.tabbar}>
       <Animated.View
+        className={"min-w-max	"}
         style={[
           styles.animatedView,
           animatedStyle,
