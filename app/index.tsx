@@ -2,7 +2,6 @@ import {
   View,
   Text,
   StyleSheet,
-  TextInput,
   Button,
   ActivityIndicator,
 } from "react-native";
@@ -13,6 +12,7 @@ import {
 } from "firebase/auth";
 import { FIREBASE_AUTH } from "@/firebaseconfig";
 import { Link } from "expo-router";
+import { TextInput } from "react-native-paper";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -45,8 +45,16 @@ const Login = () => {
   }
   return (
     <View style={styles.container}>
-      <TextInput style={styles.input} onChangeText={setEmail} />
-      <TextInput style={styles.input} onChangeText={setPassword} />
+      {/* <TextInput style={styles.input} onChangeText={setEmail} /> */}
+      {/* <TextInput style={styles.input} onChangeText={setPassword} /> */}
+      <TextInput style={styles.input} label="Email" onChangeText={setEmail} />
+      <TextInput
+        style={styles.input}
+        label="Password"
+        onChangeText={setPassword}
+        secureTextEntry
+        right={<TextInput.Icon icon="eye" />}
+      />
       {loading ? (
         <ActivityIndicator color={"#000"} size={"large"} />
       ) : (
@@ -71,7 +79,9 @@ const styles = StyleSheet.create({
   input: {
     width: "90%",
     height: 28,
-    borderWidth: 1,
+    // borderWidth: 1,
     borderColor: "red",
+    marginVertical: 15,
+    // alignItems: "center",
   },
 });
