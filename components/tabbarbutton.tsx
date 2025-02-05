@@ -8,7 +8,7 @@ import Animated, {
   withSpring,
 } from "react-native-reanimated";
 import { RouteProp } from "@react-navigation/native";
-import { Routes } from "expo-router";
+import { Route } from "expo-router";
 
 const Tabbarbutton = ({
   onPress,
@@ -21,7 +21,7 @@ const Tabbarbutton = ({
   onPress: Function;
   onLongPress: Function;
   isFocused: boolean;
-  routeName: Routes;
+  routeName: RouteProp<{ [key: string]: { name: string } }, string>;
   color: String;
   label: String;
 }) => {
@@ -57,11 +57,10 @@ const Tabbarbutton = ({
     >
       <Animated.View style={animatedIconStyle}>
         {/* define custom icon for each in route */}
-        {/* {icons[routeName]({
+        {/* {icons[routeName.name as keyof typeof icons]({
           color: isFocused ? "#fff" : "#222",
         })} */}
       </Animated.View>
-      {/* fetcginf route name as label from route object */}
       <Animated.Text
         style={[{ color: isFocused ? "#673ab7" : "#222" }, animatedTextStyle]}
       >

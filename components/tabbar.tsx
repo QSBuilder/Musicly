@@ -14,6 +14,8 @@ import Animated, {
   useSharedValue,
   withSpring,
 } from "react-native-reanimated";
+import { Route } from "expo-router";
+import { RouteProp } from "@react-navigation/native";
 
 export default function MyTabBar({
   state,
@@ -91,7 +93,7 @@ export default function MyTabBar({
             onPress={onPress}
             onLongPress={onLongPress}
             isFocused={isFocused}
-            routeName={route.name}
+            routeName={route.key}
             label={label as String}
             color={"#222"}
           />

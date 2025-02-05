@@ -15,7 +15,7 @@ import { Link } from "expo-router";
 import { TextInput } from "react-native-paper";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("abc@gmail.com");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const auth = FIREBASE_AUTH;
@@ -27,6 +27,7 @@ const Login = () => {
         email,
         password
       );
+      console.log(response);
     } catch (error) {
       alert("check email and password");
     } finally {
@@ -52,7 +53,7 @@ const Login = () => {
         style={styles.input}
         label="Password"
         onChangeText={setPassword}
-        secureTextEntry
+        // secureTextEntry
         right={<TextInput.Icon icon="eye" />}
       />
       {loading ? (
